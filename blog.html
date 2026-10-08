@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f95000">
+<title>المدونة | أفكار وتجارب أسامة دحيان</title><meta name="description" content="مدونة أسامة دحيان: أفكار وتجارب وما أتعلمه في الذكاء الاصطناعي والتقنية والعمل الرقمي — قابلة للتوسع لمئات المقالات.">
+<link rel="canonical" href="https://osamadahyan.com/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-mark">ع<span>.</span></span><span class="brand-text"><strong>أسامة دحيان</strong><small>معرفة وتقنية</small></span></a>
+<nav class="nav-desktop"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a><a href="blog.html" class="active">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل</a></nav>
+<div class="header-cta"><a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a><a class="btn btn-primary btn-sm" data-whatsapp href="#">واتساب</a></div>
+<button class="hamburger" data-nav-toggle aria-label="القائمة"><i></i><i></i><i></i></button></div>
+<nav class="mobile-nav" data-mobile-nav><div class="container"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a><a href="blog.html" class="active">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a></div></nav></header>
+<main id="main"><div class="container page-hero"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / المدونة</div><span class="eyebrow">Blog</span><h1 class="section-title">المدونة</h1><p class="section-sub">مساحة أشارك فيها أفكاري وتجربتي وما أتعلمه في الذكاء الاصطناعي والتقنية والعمل الرقمي.</p>
+<div class="searchbox"><input type="search" id="q" placeholder="ابحث في المدونة…" aria-label="بحث"></div>
+<div class="filter-bar" id="cats"><button class="chip active" data-f="all">الكل</button><button class="chip" data-f="ذكاء اصطناعي">ذكاء اصطناعي</button><button class="chip" data-f="تقنية">تقنية</button><button class="chip" data-f="أعمال رقمية">أعمال رقمية</button><button class="chip" data-f="تجارب">تجارب</button><button class="chip" data-f="أفكار">أفكار</button><button class="chip" data-f="أدوات">أدوات</button></div></div>
+<section style="padding-top:10px"><div class="container"><h2>مقالات مميزة</h2><div class="grid-3" id="featured" style="margin:14px 0 26px"></div><h2>أحدث المقالات</h2><div class="grid-3" id="list" style="margin-top:14px"></div><p style="color:var(--muted);margin-top:18px">المدونة مبنية بنظام ترقيم قابل للتوسع — تُضاف المقالات الجديدة من ملف المحتوى دون تعديل التصميم.</p></div></section></main>
+<footer><div class="container footer-grid"><div class="footer-brand"><h3>أسامة بن محمد دحيان</h3><p><strong style="color:#fff">الإنسان أولًا، والتقنية لخدمته.</strong></p><div class="socials"><a href="https://instagram.com/osama_s70" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/osama_s70" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/osama_s70" target="_blank" rel="noopener">X</a><a data-whatsapp href="#">WhatsApp</a></div></div>
+<div class="footer-links"><div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a></div><div><h4>المحتوى</h4><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a></div><div><h4>تواصل</h4><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a></div></div></div>
+<div class="container footer-bottom"><span>© <span data-year></span> أسامة دحيان</span><span>@osama_s70</span></div></footer>
+<a class="whatsapp-float" data-whatsapp href="#">◉ واتساب</a>
+<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script>
+<script>
+let ALL=[];
+fetch('data/content.json').then(r=>r.json()).then(d=>{ALL=d.articles;
+document.getElementById('featured').innerHTML=ALL.filter(a=>a.featured).map(card).join('');
+document.getElementById('list').innerHTML=ALL.map(card).join('');});
+function card(a){return `<article class="post-card"><div class="post-thumb"><span class="cat">${a.category}</span><span class="t">${a.title}</span></div><div class="post-body"><p>${a.excerpt}</p><div class="post-meta"><span>${a.date}</span><span>· ${a.readTime}</span></div><a style="font-weight:700;color:var(--accent-deep)" href="article.html?slug=${a.slug}">اقرأ المقال ←</a></div></article>`;}
+let cur='all';
+document.getElementById('cats').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(!b)return;document.querySelectorAll('#cats .chip').forEach(c=>c.classList.remove('active'));b.classList.add('active');cur=b.dataset.f;filter();});
+document.getElementById('q').addEventListener('input',filter);
+function filter(){const q=document.getElementById('q').value.trim();const items=ALL.filter(a=>(cur==='all'||a.category===cur||(a.tags||[]).includes(cur))&&(a.title+a.excerpt).includes(q));document.getElementById('list').innerHTML=items.map(card).join('')||'<p>لا نتائج.</p>';}
+</script></body></html>
