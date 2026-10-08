@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f95000">
+<title>مكتبة أسامة الرقمية | أدوات وقوالب وPrompts وأدلة</title><meta name="description" content="مكتبة أسامة: أدوات ذكاء اصطناعي، ملفات، قوالب، مواقع مفيدة، كتب، Prompts وأدلة — مكتبة عربية قابلة للتوسع.">
+<link rel="canonical" href="https://osamadahyan.com/library.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-mark">ع<span>.</span></span><span class="brand-text"><strong>أسامة دحيان</strong><small>معرفة وتقنية</small></span></a>
+<nav class="nav-desktop"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html" class="active">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل</a></nav>
+<div class="header-cta"><a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a><a class="btn btn-primary btn-sm" data-whatsapp href="#">واتساب</a></div>
+<button class="hamburger" data-nav-toggle aria-label="القائمة"><i></i><i></i><i></i></button></div>
+<nav class="mobile-nav" data-mobile-nav><div class="container"><a href="library.html" class="active">المكتبة</a><a href="knowledge.html">المعرفة</a><a href="contact.html">تواصل معي</a></div></nav></header>
+<main id="main"><div class="container page-hero"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / المكتبة</div><span class="eyebrow">مكتبة رقمية</span><h1 class="section-title">مكتبة أسامة</h1><p class="section-sub">موارد مختارة بعناية — تنمو مع الوقت: أدوات، قوالب، Prompts، كتب وأدلة.</p>
+<div class="filter-bar" data-filter-group="#grid"><button class="chip active" data-filter="all">الكل</button><button class="chip" data-filter="AI">AI</button><button class="chip" data-filter="Prompts">Prompts</button><button class="chip" data-filter="Templates">قوالب</button><button class="chip" data-filter="Guides">أدلة</button><button class="chip" data-filter="Books">كتب</button><button class="chip" data-filter="Websites">مواقع</button></div></div>
+<section style="padding-top:10px"><div class="container"><div class="grid-3" id="grid"></div></div></section></main>
+<footer><div class="container footer-grid"><div class="footer-brand"><h3>أسامة بن محمد دحيان</h3><p><strong style="color:#fff">الإنسان أولًا، والتقنية لخدمته.</strong></p><div class="socials"><a href="https://instagram.com/osama_s70" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/osama_s70" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/osama_s70" target="_blank" rel="noopener">X</a><a data-whatsapp href="#">WhatsApp</a></div></div>
+<div class="footer-links"><div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="library.html">المكتبة</a><a href="knowledge.html">المعرفة</a></div><div><h4>تواصل</h4><a href="contact.html">تواصل معي</a><a href="privacy.html">سياسة الخصوصية</a></div></div></div>
+<div class="container footer-bottom"><span>© <span data-year></span> أسامة دحيان</span></div></footer>
+<a class="whatsapp-float" data-whatsapp href="#">◉ واتساب</a>
+<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script>
+<script>fetch('data/content.json').then(r=>r.json()).then(d=>{document.getElementById('grid').innerHTML=d.resources.map(x=>`<article class="card" data-cat="${x.category}"><span class="eyebrow">${x.category} · ${x.type}</span><h3>${x.title}</h3><p>${x.desc}</p><a class="link" data-whatsapp href="#">اطلب المورد واتساب ←</a></article>`).join('');document.querySelectorAll('#grid [data-whatsapp]').forEach(a=>{a.href=SITE_CONFIG.whatsapp.link;a.target='_blank';});});</script></body></html>
