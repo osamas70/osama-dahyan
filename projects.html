@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f95000">
+<title>المشاريع والأعمال | أسامة بن محمد دحيان</title><meta name="description" content="مشاريع أسامة دحيان: مواقع إلكترونية، حلول ذكاء اصطناعي، هويات بصرية، ومشاريع رقمية — تصفح الأعمال واطلب مشروعك.">
+<link rel="canonical" href="https://osamadahyan.com/projects.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-mark">ع<span>.</span></span><span class="brand-text"><strong>أسامة دحيان</strong><small>معرفة وتقنية</small></span></a>
+<nav class="nav-desktop"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a><a href="blog.html">المدونة</a><a href="projects.html" class="active">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل</a></nav>
+<div class="header-cta"><a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a><a class="btn btn-primary btn-sm" data-whatsapp href="#">واتساب</a></div>
+<button class="hamburger" data-nav-toggle aria-label="القائمة"><i></i><i></i><i></i></button></div>
+<nav class="mobile-nav" data-mobile-nav><div class="container"><a href="index.html">الرئيسية</a><a href="projects.html" class="active">المشاريع</a><a href="services.html">الخدمات</a><a href="contact.html">تواصل معي</a></div></nav></header>
+<main id="main"><div class="container page-hero"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / المشاريع</div><span class="eyebrow">Portfolio</span><h1 class="section-title">مشاريع صنعتها أو شاركت في بنائها</h1>
+<div class="filter-bar" data-filter-group="#grid"><button class="chip active" data-filter="all">الكل</button><button class="chip" data-filter="مواقع">مواقع</button><button class="chip" data-filter="ذكاء اصطناعي">ذكاء اصطناعي</button><button class="chip" data-filter="تصميم">تصميم</button><button class="chip" data-filter="تسويق">تسويق</button><button class="chip" data-filter="مشاريع رقمية">مشاريع رقمية</button></div></div>
+<section style="padding-top:10px"><div class="container"><div class="grid-3" id="grid"></div>
+<div class="cta" style="margin-top:30px"><h2>عندك فكرة مشروع؟</h2><p>أحوّلها إلى منتج رقمي واضح وسريع.</p><div class="row"><a class="btn btn-accent" data-whatsapp href="#">ابدأ مشروعك واتساب</a><a class="btn btn-ghost" style="color:#fff;border-color:#444" href="contact.html">نموذج التواصل</a></div></div></div></section></main>
+<footer><div class="container footer-grid"><div class="footer-brand"><h3>أسامة بن محمد دحيان</h3><p><strong style="color:#fff">الإنسان أولًا، والتقنية لخدمته.</strong></p><div class="socials"><a href="https://instagram.com/osama_s70" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/osama_s70" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/osama_s70" target="_blank" rel="noopener">X</a><a data-whatsapp href="#">WhatsApp</a></div></div>
+<div class="footer-links"><div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a></div><div><h4>المحتوى</h4><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a></div><div><h4>تواصل</h4><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a></div></div></div>
+<div class="container footer-bottom"><span>© <span data-year></span> أسامة دحيان</span><span>@osama_s70</span></div></footer>
+<a class="whatsapp-float" data-whatsapp href="#">◉ واتساب</a>
+<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script>
+<script>
+fetch('data/content.json').then(r=>r.json()).then(d=>{
+ document.getElementById('grid').innerHTML=d.projects.map(p=>`<article class="proj-card" data-cat="${p.field}"><div class="proj-cover" style="background:${p.color}">${p.name.slice(0,2)}</div><div class="proj-body"><span class="eyebrow">${p.field}</span><h3>${p.name}</h3><p style="color:var(--muted)">${p.desc}</p><div class="tags"><span class="tag">دوري: ${p.role}</span>${p.tech.map(t=>`<span class="tag">${t}</span>`).join('')}</div><a style="font-weight:700;color:var(--accent-deep)" href="project.html?slug=${p.slug}">عرض المشروع ←</a></div></article>`).join('');
+});
+</script></body></html>
