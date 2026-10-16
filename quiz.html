@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f95000">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="أسامة دحيان">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
+<title>اختبار معلومات الذكاء الاصطناعي | أسامة دحيان</title>
+<meta name="description" content="اختبر معلوماتك في الذكاء الاصطناعي: 10 أسئلة تفاعلية بالعربية عن المفاهيم والأدوات والنماذج والاستخدام العملي — مع نتيجة فورية وشرح لكل إجابة.">
+<meta name="keywords" content="اختبار الذكاء الاصطناعي, أسئلة ذكاء اصطناعي, quiz AI بالعربي">
+<link rel="canonical" href="https://osamadahyan.com/quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_YE">
+<meta property="og:title" content="اختبر معلوماتك في الذكاء الاصطناعي">
+<meta property="og:description" content="10 أسئلة تفاعلية بالعربية — اكتشف مستواك في الذكاء الاصطناعي الآن.">
+<meta property="og:url" content="https://osamadahyan.com/quiz.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%231d1d1f'/><text x='32' y='44' font-size='34' text-anchor='middle' fill='%23f59e0b' font-family='sans-serif' font-weight='bold'>ع</text></svg>">
+<style>
+.quiz-wrap{max-width:780px;margin:0 auto}
+.quiz-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.quiz-progress{height:10px;background:var(--bg-soft);border-radius:999px;overflow:hidden;margin:14px 0 6px}
+.quiz-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f95000,#f59e0b);border-radius:inherit;transition:width .35s}
+.quiz-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;color:var(--muted);font-size:14.5px;font-weight:600}
+.quiz-timer{display:inline-flex;align-items:center;gap:8px;background:#fff7ed;border:1px solid #fed7aa;padding:6px 14px;border-radius:999px;color:#9a3412;font-weight:800}
+.quiz-timer.low{background:#fef2f2;border-color:#fecaca;color:#b91c1c}
+.quiz-q{font-size:clamp(19px,3vw,24px);font-weight:800;margin:14px 0 6px;line-height:1.7}
+.quiz-level{display:inline-block;font-size:13px;background:#f5f5f7;border:1px solid var(--line);padding:3px 12px;border-radius:999px;color:var(--muted);font-weight:700}
+.quiz-opts{display:grid;gap:12px;margin-top:18px}
+.quiz-opt{text-align:right;font-family:inherit;width:100%;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;font-size:16.5px;font-weight:600;cursor:pointer;transition:.2s;display:flex;gap:12px;align-items:flex-start}
+.quiz-opt .k{width:32px;height:32px;flex-shrink:0;border-radius:10px;background:#f5f5f7;display:grid;place-items:center;font-weight:800;font-size:15px}
+.quiz-opt:hover{border-color:var(--accent);background:#fff7ed}
+.quiz-opt.correct{border-color:#22c55e;background:#f0fdf4}
+.quiz-opt.correct .k{background:#22c55e;color:#fff}
+.quiz-opt.wrong{border-color:#ef4444;background:#fef2f2}
+.quiz-opt.wrong .k{background:#ef4444;color:#fff}
+.quiz-opt:disabled{cursor:default;opacity:1}
+.quiz-explain{display:none;background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:14px 16px;margin-top:14px;font-size:15px;color:#78350f}
+.quiz-explain.show{display:block}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.quiz-start{text-align:center;padding:20px 6px}
+.quiz-start .big{font-size:54px}
+.quiz-feats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0}
+.quiz-feats span{background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:14px;color:var(--muted);font-weight:600}
+.score-circle{width:140px;height:140px;border-radius:50%;margin:10px auto;display:grid;place-items:center;font-size:34px;font-weight:800;color:#fff;background:conic-gradient(#f95000 var(--p,0%),#eee 0)}
+.score-circle b{background:#1d1d1f;width:108px;height:108px;border-radius:50%;display:grid;place-items:center}
+.score-circle b small{font-size:14px;display:block;color:#bbb;font-weight:600}
+.review-item{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:10px;background:#fff}
+.review-item.ok{border-color:#bbf7d0;background:#f0fdf4}
+.review-item.no{border-color:#fecaca;background:#fef2f2}
+@media(min-width:860px){.quiz-card{padding:38px}}
+</style>
+</head><body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="index.html"><span class="brand-mark">ع<span>.</span></span><span class="brand-text"><strong>أسامة دحيان</strong><small>معرفة وتقنية</small></span></a>
+<nav class="nav-desktop" aria-label="التنقل الرئيسي">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">عن أسامة</a>
+      <a href="ai.html">الذكاء الاصطناعي</a>
+      <a href="quiz.html" class="active">اختبر نفسك</a>
+      <a href="blog.html">المدونة</a>
+      <button class="mega-toggle" data-mega-toggle aria-expanded="false" aria-haspopup="true">استكشف <span class="caret">▾</span></button>
+    </nav>
+<div class="header-cta"><a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a><a class="btn btn-primary btn-sm" data-whatsapp href="#">واتساب</a></div>
+<button class="hamburger" data-nav-toggle aria-label="القائمة"><i></i><i></i><i></i></button></div>
+<div class="mega" data-mega-panel>
+  <div class="mega-card">
+    <div class="mega-col"><h4>المعرفة والمحتوى</h4>
+      <a class="mega-item" href="ai.html"><span class="mega-ic">✦</span>الذكاء الاصطناعي</a>
+      <a class="mega-item" href="quiz.html"><span class="mega-ic">؟</span>اختبار الذكاء الاصطناعي</a>
+      <a class="mega-item" href="knowledge.html"><span class="mega-ic">✎</span>المعرفة</a>
+      <a class="mega-item" href="blog.html"><span class="mega-ic">◎</span>المدونة</a>
+      <a class="mega-item" href="library.html"><span class="mega-ic">▣</span>مكتبة أسامة</a>
+    </div>
+    <div class="mega-col"><h4>خدماتي</h4>
+      <a class="mega-item" href="services.html#ai"><span class="mega-ic">✦</span>حلول الذكاء الاصطناعي</a>
+      <a class="mega-item" href="services.html#web"><span class="mega-ic">◈</span>بناء المواقع</a>
+      <a class="mega-item" href="services.html#social"><span class="mega-ic">◎</span>إدارة السوشيال ميديا</a>
+      <a class="mega-item" href="services.html#brand"><span class="mega-ic">⬢</span>الهوية البصرية</a>
+    </div>
+    <div class="mega-col"><h4>أعمالي</h4>
+      <a class="mega-item" href="projects.html"><span class="mega-ic">◈</span>المشاريع</a>
+      <a class="mega-item" href="impact.html"><span class="mega-ic">♡</span>الأثر</a>
+      <a class="mega-item" href="index.html#testimonials"><span class="mega-ic">★</span>آراء العملاء</a>
+      <a class="mega-item" href="about.html"><span class="mega-ic">◉</span>عن أسامة</a>
+    </div>
+    <div class="mega-col"><h4>تواصل وابدأ</h4>
+      <a class="mega-item" href="contact.html"><span class="mega-ic">✉</span>تواصل معي</a>
+      <a class="mega-item" data-whatsapp href="#"><span class="mega-ic">◉</span>واتساب مباشر</a>
+      <a class="mega-item" href="services.html"><span class="mega-ic">✦</span>اطلب خدمة</a>
+      <a class="mega-item" href="services.html#faq"><span class="mega-ic">؟</span>الأسئلة الشائعة</a>
+    </div>
+  </div>
+</div><nav class="mobile-nav" data-mobile-nav><div class="container"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="quiz.html" class="active">اختبر نفسك ★ جديد</a><a href="knowledge.html">المعرفة</a><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a></div></nav></header>
+<main id="main">
+<div class="container page-hero">
+<div class="breadcrumb"><a href="index.html">الرئيسية</a> / <a href="ai.html">الذكاء الاصطناعي</a> / اختبار المعلومات</div>
+<span class="eyebrow">صفحة جديدة · تفاعلية</span>
+<h1 class="section-title">اختبر معلوماتك في <span class="grad-text">الذكاء الاصطناعي</span></h1>
+<p class="section-sub">10 أسئلة بالعربية من السهل إلى المتقدم — أجب، وشاهد نتيجتك فورًا مع شرح لكل سؤال. بدون تسجيل، والنتيجة تُحفظ في متصفحك.</p>
+</div>
+<section style="padding-top:14px"><div class="container quiz-wrap">
+<div class="quiz-card" id="quiz-card">
+<!-- شاشة البداية -->
+<div class="quiz-start" id="screen-start">
+<div class="big">🧠</div>
+<h2 style="margin:8px 0">جاهز تختبر نفسك؟</h2>
+<p style="color:var(--muted)">مدّة كل سؤال 30 ثانية. اختر الإجابة الصحيحة من 4 خيارات، وستظهر لك النتيجة والتقييم في النهاية.</p>
+<div class="quiz-feats"><span>✦ 10 أسئلة</span><span>⏱ 30 ثانية للسؤال</span><span>◎ شرح لكل إجابة</span><span>★ نتيجتك فورًا</span></div>
+<div class="quiz-actions" style="justify-content:center">
+<button class="btn btn-accent" id="btn-start">ابدأ الاختبار الآن ←</button>
+<a class="btn btn-ghost" href="ai.html">تعلّم أولًا في صفحة AI</a>
+</div>
+<p id="best-line" style="margin-top:14px;font-size:14px;color:var(--muted)"></p>
+</div>
+<!-- شاشة الأسئلة -->
+<div id="screen-quiz" style="display:none">
+<div class="quiz-meta"><span id="q-count">السؤال 1 من 10</span><span class="quiz-timer" id="q-timer">⏱ 30</span></div>
+<div class="quiz-progress"><i id="q-bar"></i></div>
+<div style="margin-top:10px"><span class="quiz-level" id="q-level">مبتدئ</span></div>
+<h2 class="quiz-q" id="q-text"></h2>
+<div class="quiz-opts" id="q-opts"></div>
+<div class="quiz-explain" id="q-explain"></div>
+<div class="quiz-actions">
+<button class="btn btn-primary" id="btn-next" disabled>السؤال التالي ←</button>
+<button class="btn btn-ghost btn-sm" id="btn-quit">إنهاء</button>
+</div>
+</div>
+<!-- شاشة النتيجة -->
+<div id="screen-result" style="display:none;text-align:center">
+<div class="score-circle" id="score-circle"><b><span id="score-num">0/10</span><small>نتيجتك</small></b></div>
+<h2 id="score-title" style="margin-top:10px"></h2>
+<p id="score-desc" style="color:var(--muted)"></p>
+<div class="quiz-actions" style="justify-content:center">
+<button class="btn btn-accent" id="btn-retry">🔄 أعد المحاولة</button>
+<a class="btn btn-primary" id="btn-share" href="#" target="_blank" rel="noopener">مشاركة نتيجتي واتساب</a>
+</div>
+<div class="quiz-actions" style="justify-content:center">
+<a class="btn btn-ghost btn-sm" href="ai.html">استكشف الذكاء الاصطناعي</a>
+<a class="btn btn-ghost btn-sm" href="knowledge.html">طوّر معلوماتك</a>
+<a class="btn btn-ghost btn-sm" href="index.html">عودة للرئيسية</a>
+</div>
+<div id="review" style="text-align:right;margin-top:18px"></div>
+</div>
+</div>
+<div class="cta" style="margin-top:26px"><h2>أعجبتك الفكرة؟</h2><p>تعلّم أكثر عن الذكاء الاصطناعي بالعربية، أو اطلب استشارة لتطبيقه في عملك.</p><div class="row"><a class="btn btn-accent" href="knowledge.html">ابدأ التعلم</a><a class="btn btn-ghost" style="color:#fff;border-color:#444" data-whatsapp href="#">اطلب استشارة AI</a></div></div>
+</div></section>
+</main>
+<footer><div class="container footer-grid"><div class="footer-brand"><h3>أسامة بن محمد دحيان</h3><p><strong style="color:#fff">الإنسان أولًا، والتقنية لخدمته.</strong></p><div class="socials"><a href="https://instagram.com/osama_s70" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/osama_s70" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/osama_s70" target="_blank" rel="noopener">X</a><a data-whatsapp href="#">WhatsApp</a></div></div>
+<div class="footer-links"><div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="quiz.html">اختبار AI</a><a href="knowledge.html">المعرفة</a></div><div><h4>المحتوى</h4><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a></div><div><h4>تواصل</h4><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a></div></div></div>
+<div class="container footer-bottom"><span>© <span data-year></span> أسامة دحيان</span><span>@osama_s70</span></div></footer>
+<a class="whatsapp-float" data-whatsapp href="#">◉ واتساب</a>
+<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script>
+<script>
+// ===== بنك الأسئلة =====
+const QUESTIONS = [
+{q:"ما المقصود باختصار AI؟",level:"مبتدئ",opts:["الذكاء الاصطناعي — Artificial Intelligence","الإنترنت الآلي","التحليل المتقدم","الواجهات التفاعلية"],a:0,ex:"AI تعني الذكاء الاصطناعي: قدرة الأنظمة على محاكاة القدرات البشرية كالفهم والتعلم واتخاذ القرار."},
+{q:"ما هو الـ Prompt في التعامل مع أدوات الذكاء الاصطناعي؟",level:"مبتدئ",opts:["نوع من الفيروسات","التعليمة أو الأمر النصي الذي تكتبه للأداة","اسم نموذج ذكاء اصطناعي","سرعة الإنترنت"],a:1,ex:"الـ Prompt هو النص الذي تكتبه للنموذج (سؤال أو أمر). كلما كان واضحًا ومحددًا كانت النتيجة أفضل."},
+{q:"أي مما يلي يُعد مثالًا على نموذج لغوي كبير (LLM)؟",level:"مبتدئ",opts:["الفوتوشوب","ChatGPT و Claude و Gemini","الإكسل","البلوتوث"],a:1,ex:"النماذج اللغوية الكبيرة مثل ChatGPT وClaude وGemini مدربة على نصوص ضخمة لتوليد وفهم اللغة."},
+{q:"ما هو التعلم الآلي (Machine Learning)؟",level:"متوسط",opts:["حفظ البيانات في السحابة","فرع من AI يتعلم فيه النظام من البيانات بدل البرمجة الصريحة","تصليح الحواسيب آليًا","لغة برمجة جديدة"],a:1,ex:"التعلم الآلي يمكّن الأنظمة من اكتشاف الأنماط من البيانات وتحسين أدائها دون برمجة كل قاعدة يدويًا."},
+{q:"ماذا تعني ظاهرة هلوسة النماذج (Hallucination)؟",level:"متوسط",opts:["توقف النموذج عن العمل","توليد النموذج معلومات خاطئة بثقة وكأنها صحيحة","سرعة استجابة النموذج","حذف المحادثات تلقائيًا"],a:1,ex:"الهلوسة تعني اختلاق معلومات غير صحيحة بثقة، لذلك يجب دائمًا التحقق من الحقائق المهمة."},
+{q:"ما هو التعلم العميق (Deep Learning)؟",level:"متوسط",opts:["حفظ الملفات بعمق","نوع متقدم من التعلم الآلي يستخدم شبكات عصبية متعددة الطبقات","تعلم البرمجة بعمق","قراءة الكتب الطويلة"],a:1,ex:"التعلم العميق يعتمد على شبكات عصبية عميقة، وهو أساس التعرف على الصور والصوت والنماذج اللغوية الحديثة."},
+{q:"أي أداة من التالية مشهورة بتوليد الصور بالذكاء الاصطناعي؟",level:"متوسط",opts:["Midjourney و DALL-E","الآلة الحاسبة","مدير الملفات","البريد الإلكتروني"],a:0,ex:"أدوات مثل Midjourney وDALL-E وStable Diffusion تولّد صورًا من وصف نصي."},
+{q:"ما المقصود بوكلاء الذكاء الاصطناعي (AI Agents)؟",level:"متقدم",opts:["روبوتات تنظف المنازل فقط","أنظمة تنفذ مهام متعددة الخطوات بشكل شبه مستقل لتحقيق هدف","موظفو شركات التقنية","برامج مكافحة الفيروسات"],a:1,ex:"الوكلاء يستطيعون التخطيط واستخدام الأدوات وتنفيذ سلسلة خطوات (بحث، حجز، تحليل) لتحقيق هدف تحدده أنت."},
+{q:"ما أفضل ممارسة عند استخدام الذكاء الاصطناعي في العمل؟",level:"متقدم",opts:["نسخ النتائج ونشرها دون مراجعة","استخدامه كمساعد مع مراجعة بشرية وحماية البيانات الحساسة","مشاركة كلمات المرور مع الأدوات","الاعتماد عليه في القرارات المصيرية دون تحقق"],a:1,ex:"القاعدة الذهبية: AI مساعد قوي، لكن المراجعة البشرية ضرورية، ولا تُدخل بيانات سرية في أدوات غير موثوقة."},
+{q:"ما هو الـ RAG باختصار؟",level:"متقدم",opts:["تقنية تربط النموذج بمصادر ومعرفة خارجية لتقليل الهلوسة","نوع جديد من الهواتف","اختصار للواي فاي السريع","برنامج لتصميم الشعارات"],a:0,ex:"التوليد المعزز بالاسترجاع (RAG) يجعل النموذج يسترجع معلومات من مستنداتك قبل الإجابة، فيعطي إجابات أدق ومحدّثة."}
+];
+const TIME_PER_Q = 30;
+let idx = 0, score = 0, timerId = null, timeLeft = TIME_PER_Q, answers = [];
+const $ = id => document.getElementById(id);
+const startScr = $("screen-start"), quizScr = $("screen-quiz"), resScr = $("screen-result");
+
+function showBest(){
+  try{
+    const b = localStorage.getItem("ai_quiz_best");
+    $("best-line").textContent = b ? ("🏆 أفضل نتيجة لك: " + b + " / " + QUESTIONS.length) : "";
+  }catch(e){}
+}
+showBest();
+
+$("btn-start").onclick = () => { idx=0; score=0; answers=[]; startScr.style.display="none"; resScr.style.display="none"; quizScr.style.display="block"; renderQ(); window.scrollTo({top:0,behavior:"smooth"}); };
+$("btn-quit").onclick = () => finish(true);
+$("btn-next").onclick = () => { idx++; if(idx < QUESTIONS.length){ renderQ(); } else { finish(false); } };
+$("btn-retry").onclick = () => { idx=0; score=0; answers=[]; resScr.style.display="none"; quizScr.style.display="block"; renderQ(); window.scrollTo({top:0,behavior:"smooth"}); };
+
+function renderQ(){
+  clearInterval(timerId);
+  timeLeft = TIME_PER_Q;
+  const Q = QUESTIONS[idx];
+  $("q-count").textContent = "السؤال " + (idx+1) + " من " + QUESTIONS.length;
+  $("q-level").textContent = Q.level;
+  $("q-bar").style.width = ((idx)/QUESTIONS.length*100) + "%";
+  $("q-text").textContent = Q.q;
+  $("q-explain").className = "quiz-explain";
+  $("q-explain").textContent = "";
+  $("btn-next").disabled = true;
+  $("btn-next").textContent = (idx === QUESTIONS.length-1) ? "عرض النتيجة ★" : "السؤال التالي ←";
+  const box = $("q-opts"); box.innerHTML = "";
+  const letters = ["أ","ب","ج","د"];
+  Q.opts.forEach((t,i)=>{
+    const b = document.createElement("button");
+    b.className = "quiz-opt"; b.type = "button";
+    b.innerHTML = "<span class='k'>"+letters[i]+"</span><span>"+t+"</span>";
+    b.onclick = ()=> pick(i,b);
+    box.appendChild(b);
+  });
+  updateTimer();
+  timerId = setInterval(()=>{
+    timeLeft--;
+    updateTimer();
+    if(timeLeft<=0){ clearInterval(timerId); pick(-1,null); }
+  },1000);
+}
+function updateTimer(){
+  const t = $("q-timer");
+  t.textContent = "⏱ " + timeLeft;
+  t.classList.toggle("low", timeLeft<=10);
+}
+function pick(i,btn){
+  clearInterval(timerId);
+  const Q = QUESTIONS[idx];
+  const opts = document.querySelectorAll("#q-opts .quiz-opt");
+  opts.forEach(o=>o.disabled = true);
+  let correct = (i === Q.a);
+  if(correct) score++;
+  opts.forEach((o,k)=>{
+    if(k===Q.a) o.classList.add("correct");
+    else if(k===i) o.classList.add("wrong");
+  });
+  const ex = $("q-explain");
+  if(i===-1){ ex.innerHTML = "<b>⏱ انتهى الوقت!</b> الإجابة الصحيحة: <b>"+Q.opts[Q.a]+"</b><br>"+Q.ex; }
+  else if(correct){ ex.innerHTML = "<b>✅ إجابة صحيحة!</b><br>"+Q.ex; }
+  else { ex.innerHTML = "<b>❌ إجابة خاطئة.</b> الصحيحة: <b>"+Q.opts[Q.a]+"</b><br>"+Q.ex; }
+  ex.classList.add("show");
+  answers.push({q:Q.q, ok:correct, correctText:Q.opts[Q.a]});
+  $("q-bar").style.width = ((idx+1)/QUESTIONS.length*100) + "%";
+  $("btn-next").disabled = false;
+  $("btn-next").focus();
+}
+function finish(quit){
+  clearInterval(timerId);
+  quizScr.style.display="none"; resScr.style.display="block";
+  const total = quit ? (idx) : QUESTIONS.length;
+  const s = score, n = QUESTIONS.length;
+  $("score-num").textContent = s + "/" + n;
+  $("score-circle").style.setProperty("--p", (s/n*100)+"%");
+  let title="", desc="";
+  if(s<=4){ title="🌱 بداية جيدة — استمر!"; desc="لديك أساس يحتاج تعزيز. تصفح صفحة الذكاء الاصطناعي والمعرفة ثم أعد المحاولة."; }
+  else if(s<=7){ title="👏 مستوى جيد جدًا!"; desc="تفهم الأساسيات جيدًا. راجع الأسئلة المتقدمة (الوكلاء و RAG والهلوسة) لتصل للتميز."; }
+  else { title="🏆 ممتاز — خبير AI!"; desc="معلوماتك قوية في الذكاء الاصطناعي. شارك نتيجتك وتحدَّ أصدقاءك!"; }
+  if(quit && idx < n){ title="⏹ أنهيت مبكرًا"; desc="أجبت عن "+idx+" أسئلة وسجلت "+s+" صحيحة. أكمل التحدي لتحصل على تقييمك الكامل!"; }
+  $("score-title").textContent = title;
+  $("score-desc").textContent = desc;
+  try{
+    const prev = parseInt(localStorage.getItem("ai_quiz_best")||"0",10);
+    if(s>prev) localStorage.setItem("ai_quiz_best", String(s));
+  }catch(e){}
+  const msg = encodeURIComponent("حصلت على "+s+" من "+n+" في اختبار الذكاء الاصطناعي بموقع أسامة دحيان 🧠 جرّب أنت أيضًا: https://osamadahyan.com/quiz.html");
+  $("btn-share").href = "https://wa.me/?text="+msg;
+  const rv = $("review"); rv.innerHTML = "<h3 style='margin-bottom:6px'>مراجعة إجاباتك:</h3>" + answers.map((a,k)=>"<div class='review-item "+(a.ok?"ok":"no")+"'><b>"+(k+1)+". "+(a.ok?"✅":"❌")+"</b> "+a.q+"<br><small>الإجابة الصحيحة: "+a.correctText+"</small></div>").join("");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script><script src="assets/js/pwa.js" defer></script>
+</body></html>

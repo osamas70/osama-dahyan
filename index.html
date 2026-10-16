@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f95000">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="أسامة دحيان">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
 <title>أسامة بن محمد دحيان | الإنسان أولًا، والتقنية لخدمته — ذكاء اصطناعي ومعرفة</title>
 <meta name="description" content="أسامة بن محمد دحيان — مهتم بالذكاء الاصطناعي والتقنية ونشر المعرفة. حلول ذكاء اصطناعي، بناء مواقع، إدارة سوشيال ميديا، هوية بصرية، مقالات وأدوات وموارد بالعربية.">
 <meta name="keywords" content="أسامة دحيان, أسامة بن محمد دحيان, الذكاء الاصطناعي, الذكاء الاصطناعي بالعربي, أدوات الذكاء الاصطناعي, تعلم الذكاء الاصطناعي, أخبار الذكاء الاصطناعي, بناء المواقع الإلكترونية, الهوية البصرية, إدارة حسابات التواصل الاجتماعي">
@@ -45,13 +51,9 @@
       <a href="index.html" class="active">الرئيسية</a>
       <a href="about.html">عن أسامة</a>
       <a href="ai.html">الذكاء الاصطناعي</a>
-      <a href="knowledge.html">المعرفة</a>
+      <a href="quiz.html">اختبر نفسك</a>
       <a href="blog.html">المدونة</a>
-      <a href="projects.html">المشاريع</a>
-      <a href="services.html">الخدمات</a>
-      <a href="library.html">المكتبة</a>
-      <a href="impact.html">الأثر</a>
-      <a href="contact.html">تواصل</a>
+      <button class="mega-toggle" data-mega-toggle aria-expanded="false" aria-haspopup="true">استكشف <span class="caret">▾</span></button>
     </nav>
     <div class="header-cta">
       <a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a>
@@ -59,11 +61,40 @@
     </div>
     <button class="hamburger" data-nav-toggle aria-label="فتح القائمة"><i></i><i></i><i></i></button>
   </div>
-  <nav class="mobile-nav" data-mobile-nav aria-label="قائمة الجوال">
+  <div class="mega" data-mega-panel>
+  <div class="mega-card">
+    <div class="mega-col"><h4>المعرفة والمحتوى</h4>
+      <a class="mega-item" href="ai.html"><span class="mega-ic">✦</span>الذكاء الاصطناعي</a>
+      <a class="mega-item" href="quiz.html"><span class="mega-ic">؟</span>اختبار الذكاء الاصطناعي</a>
+      <a class="mega-item" href="knowledge.html"><span class="mega-ic">✎</span>المعرفة</a>
+      <a class="mega-item" href="blog.html"><span class="mega-ic">◎</span>المدونة</a>
+      <a class="mega-item" href="library.html"><span class="mega-ic">▣</span>مكتبة أسامة</a>
+    </div>
+    <div class="mega-col"><h4>خدماتي</h4>
+      <a class="mega-item" href="services.html#ai"><span class="mega-ic">✦</span>حلول الذكاء الاصطناعي</a>
+      <a class="mega-item" href="services.html#web"><span class="mega-ic">◈</span>بناء المواقع</a>
+      <a class="mega-item" href="services.html#social"><span class="mega-ic">◎</span>إدارة السوشيال ميديا</a>
+      <a class="mega-item" href="services.html#brand"><span class="mega-ic">⬢</span>الهوية البصرية</a>
+    </div>
+    <div class="mega-col"><h4>أعمالي</h4>
+      <a class="mega-item" href="projects.html"><span class="mega-ic">◈</span>المشاريع</a>
+      <a class="mega-item" href="impact.html"><span class="mega-ic">♡</span>الأثر</a>
+      <a class="mega-item" href="index.html#testimonials"><span class="mega-ic">★</span>آراء العملاء</a>
+      <a class="mega-item" href="about.html"><span class="mega-ic">◉</span>عن أسامة</a>
+    </div>
+    <div class="mega-col"><h4>تواصل وابدأ</h4>
+      <a class="mega-item" href="contact.html"><span class="mega-ic">✉</span>تواصل معي</a>
+      <a class="mega-item" data-whatsapp href="#"><span class="mega-ic">◉</span>واتساب مباشر</a>
+      <a class="mega-item" href="services.html"><span class="mega-ic">✦</span>اطلب خدمة</a>
+      <a class="mega-item" href="services.html#faq"><span class="mega-ic">؟</span>الأسئلة الشائعة</a>
+    </div>
+  </div>
+</div><nav class="mobile-nav" data-mobile-nav aria-label="قائمة الجوال">
     <div class="container">
       <a href="index.html" class="active">الرئيسية</a>
       <a href="about.html">عن أسامة</a>
       <a href="ai.html">الذكاء الاصطناعي</a>
+      <a href="quiz.html">اختبر نفسك ★ جديد</a>
       <a href="knowledge.html">المعرفة</a>
       <a href="blog.html">المدونة</a>
       <a href="projects.html">المشاريع</a>
@@ -148,7 +179,7 @@
       <article class="card reveal"><div class="icon">✎</div><h3>دروس وشروحات</h3><p>شروحات خطوة بخطوة من الصفر حتى الاحتراف.</p><a class="link" href="knowledge.html">ابدأ التعلم ←</a></article>
       <article class="card reveal"><div class="icon">▣</div><h3>موارد مفيدة</h3><p>ملفات وPrompts وأدلة مختارة بعناية في المكتبة.</p><a class="link" href="library.html">تصفح الموارد ←</a></article>
     </div>
-    <div class="center" style="margin-top:26px"><a class="btn btn-accent" href="ai.html">استكشف عالم الذكاء الاصطناعي</a></div>
+    <div class="center" style="margin-top:26px"><a class="btn btn-accent" href="ai.html">استكشف عالم الذكاء الاصطناعي</a> <a class="btn btn-primary" href="quiz.html" style="margin-right:10px">🧠 اختبر معلوماتك — صفحة جديدة</a></div>
   </div>
 </section>
 
@@ -224,7 +255,7 @@
 </section>
 
 <!-- 11. التوصيات -->
-<section style="background:linear-gradient(180deg,#fffbeb 0%,#ffffff 70%);border-block:1px solid var(--line)">
+<section id="testimonials" style="background:linear-gradient(180deg,#fffbeb 0%,#ffffff 70%);border-block:1px solid var(--line)">
   <div class="container">
     <div class="center reveal"><span class="eyebrow">ثقة</span><h2 class="section-title">ماذا يقول من تعامل معي؟</h2></div>
     <div class="grid-3" id="home-testi" style="margin-top:26px"></div>
@@ -258,7 +289,7 @@
       </div>
     </div>
     <div class="footer-links">
-      <div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html">المعرفة</a></div>
+      <div><h4>الموقع</h4><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="quiz.html">اختبار AI</a><a href="knowledge.html">المعرفة</a></div>
       <div><h4>المحتوى</h4><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a></div>
       <div><h4>تواصل</h4><a href="impact.html">الأثر</a><a href="contact.html">تواصل معي</a><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a></div>
     </div>
@@ -281,5 +312,6 @@ fetch('data/content.json').then(r=>r.json()).then(d=>{
   ht.innerHTML=d.testimonials.map(t=>`<div class="testi"><div class="stars">★★★★★</div><p>"${t.text}"</p><div class="who"><span class="avatar">${t.name[0]}</span><div><b>${t.name}</b><br><small style="color:var(--muted)">${t.role}</small></div></div></div>`).join('');
 });
 </script>
+<script src="assets/js/pwa.js" defer></script>
 </body>
 </html>

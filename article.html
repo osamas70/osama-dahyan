@@ -1,5 +1,11 @@
 ﻿<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f95000">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="أسامة دحيان">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png">
 <title>المقال | أسامة بن محمد دحيان</title><meta name="description" content="اقرأ مقالات أسامة دحيان في الذكاء الاصطناعي والتقنية — تجربة قراءة ممتازة مع فهرس ومصادر ومقالات ذات صلة.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -7,10 +13,43 @@
 <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
 <header class="site-header"><div class="container header-inner">
 <a class="brand" href="index.html"><span class="brand-mark">ع<span>.</span></span><span class="brand-text"><strong>أسامة دحيان</strong><small>معرفة وتقنية</small></span></a>
-<nav class="nav-desktop"><a href="index.html">الرئيسية</a><a href="about.html">عن أسامة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="knowledge.html" class="active">المعرفة</a><a href="blog.html">المدونة</a><a href="projects.html">المشاريع</a><a href="services.html">الخدمات</a><a href="library.html">المكتبة</a><a href="impact.html">الأثر</a><a href="contact.html">تواصل</a></nav>
+<nav class="nav-desktop" aria-label="التنقل الرئيسي">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">عن أسامة</a>
+      <a href="ai.html">الذكاء الاصطناعي</a>
+      <a href="blog.html">المدونة</a>
+      <button class="mega-toggle active" data-mega-toggle aria-expanded="false" aria-haspopup="true">استكشف <span class="caret">▾</span></button>
+    </nav>
 <div class="header-cta"><a class="btn btn-ghost btn-sm" href="contact.html">تواصل معي</a><a class="btn btn-primary btn-sm" data-whatsapp href="#">واتساب</a></div>
 <button class="hamburger" data-nav-toggle aria-label="القائمة"><i></i><i></i><i></i></button></div>
-<nav class="mobile-nav" data-mobile-nav><div class="container"><a href="knowledge.html">المعرفة</a><a href="blog.html">المدونة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="contact.html">تواصل معي</a></div></nav></header>
+<div class="mega" data-mega-panel>
+  <div class="mega-card">
+    <div class="mega-col"><h4>المعرفة والمحتوى</h4>
+      <a class="mega-item" href="ai.html"><span class="mega-ic">✦</span>الذكاء الاصطناعي</a>
+      <a class="mega-item" href="knowledge.html"><span class="mega-ic">✎</span>المعرفة</a>
+      <a class="mega-item" href="blog.html"><span class="mega-ic">◎</span>المدونة</a>
+      <a class="mega-item" href="library.html"><span class="mega-ic">▣</span>مكتبة أسامة</a>
+    </div>
+    <div class="mega-col"><h4>خدماتي</h4>
+      <a class="mega-item" href="services.html#ai"><span class="mega-ic">✦</span>حلول الذكاء الاصطناعي</a>
+      <a class="mega-item" href="services.html#web"><span class="mega-ic">◈</span>بناء المواقع</a>
+      <a class="mega-item" href="services.html#social"><span class="mega-ic">◎</span>إدارة السوشيال ميديا</a>
+      <a class="mega-item" href="services.html#brand"><span class="mega-ic">⬢</span>الهوية البصرية</a>
+    </div>
+    <div class="mega-col"><h4>أعمالي</h4>
+      <a class="mega-item" href="projects.html"><span class="mega-ic">◈</span>المشاريع</a>
+      <a class="mega-item" href="impact.html"><span class="mega-ic">♡</span>الأثر</a>
+      <a class="mega-item" href="index.html#testimonials"><span class="mega-ic">★</span>آراء العملاء</a>
+      <a class="mega-item" href="about.html"><span class="mega-ic">◉</span>عن أسامة</a>
+    </div>
+    <div class="mega-col"><h4>تواصل وابدأ</h4>
+      <a class="mega-item" href="contact.html"><span class="mega-ic">✉</span>تواصل معي</a>
+      <a class="mega-item" data-whatsapp href="#"><span class="mega-ic">◉</span>واتساب مباشر</a>
+      <a class="mega-item" href="services.html"><span class="mega-ic">✦</span>اطلب خدمة</a>
+      <a class="mega-item" href="services.html#faq"><span class="mega-ic">؟</span>الأسئلة الشائعة</a>
+    </div>
+  </div>
+</div><nav class="mobile-nav" data-mobile-nav><div class="container"><a href="knowledge.html">المعرفة</a><a href="blog.html">المدونة</a><a href="ai.html">الذكاء الاصطناعي</a><a href="contact.html">تواصل معي</a></div></nav></header>
 <main id="main"><div class="container page-hero"><div class="breadcrumb"><a href="index.html">الرئيسية</a> / <a href="knowledge.html">المعرفة</a> / <span id="crumb">مقال</span></div></div>
 <section style="padding-top:0"><div class="container"><article class="article-body" id="article"><p>جارٍ تحميل المقال…</p></article>
 <div style="max-width:780px;margin:18px auto"><h3>مقالات ذات صلة</h3><div class="grid-2" id="related" style="margin-top:12px"></div>
@@ -36,4 +75,5 @@ fetch('data/content.json').then(r=>r.json()).then(d=>{
  document.getElementById('share-x').href=`https://x.com/intent/tweet?text=${tx}&url=${url}`;
  document.getElementById('share-wa').href=`https://wa.me/?text=${tx}%20${url}`;
 });
-</script></body></html>
+</script><script src="assets/js/pwa.js" defer></script>
+</body></html>
