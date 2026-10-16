@@ -8,7 +8,7 @@
    - Login / OAuth / WhatsApp links are NEVER intercepted.
    Bump SW_VERSION to force a fresh precache on deploy.
    ============================================================ */
-const SW_VERSION = 'osama-v1';
+const SW_VERSION = 'osama-v2';
 const STATIC_CACHE = 'static-' + SW_VERSION;
 const PAGES_CACHE = 'pages-' + SW_VERSION;
 const IMAGES_CACHE = 'images-' + SW_VERSION;
